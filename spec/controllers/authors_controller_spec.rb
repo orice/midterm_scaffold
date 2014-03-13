@@ -42,7 +42,11 @@ describe AuthorsController do
     it "assigns the requested author as @author" do
       author = Author.create! valid_attributes
       get :show, {:id => author.to_param}, valid_session
+
       expect(assigns(:author)).to eq(author)
+
+      #click_link('Books')
+
     end
   end
 
