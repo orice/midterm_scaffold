@@ -1,6 +1,8 @@
-<h1>Editing author</h1>
+<h1>Editing <%= @author.name %></h1>
 
 <%= render 'form' %>
 
+<div class="row-fluid">
 <%= link_to 'Show', @author %> |
 <%= link_to 'Back', authors_path %>
+</div>

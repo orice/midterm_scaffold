@@ -1,3 +1,6 @@
+<title><%= @author.name %></title>
+<h1>Welcome <%= @author.name %> !</h1>
+
 <%= form_for(@author) do |f| %>
   <% if @author.errors.any? %>
     <div id="error_explanation">
@@ -10,16 +13,23 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :genres %><br>
-    <%= f.text_field :genres %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  
+  
+  <div class="container">
+    <div class="row">
+      <div class="span6 offset3">
+        <div class="field">
+          <%= f.label :name %><br>
+          <%= f.text_field :name %>
+        </div>
+        <div class="field">
+          <%= f.label :genres %><br>
+          <%= f.text_field :genres %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Create Author", class: "btn btn-large btn-primary"%>
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>

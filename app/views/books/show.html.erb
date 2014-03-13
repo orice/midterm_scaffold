@@ -1,14 +1,23 @@
+<div class="row-fluid">
 <p id="notice"><%= notice %></p>
+</div>
 
+<div class="container-fluid">
+<div class="row-fluid">
 <p>
   <strong>Title:</strong>
   <%= @book.title %>
 </p>
-
+</div>
+<div class="row-fluid">
 <p>
   <strong>Review:</strong>
   <%= @book.review %>
 </p>
+</div>
 
+<div class="row-fluid">
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
+</div>
+</div>
